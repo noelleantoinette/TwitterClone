@@ -5,8 +5,23 @@ var nodemon = require('nodemon');
 var swig = require('swig');
 var _ = require('underscore');
 var routes = require('./routes/');
+var bodyParser = require('body-parser');
+var socket = io.connect();
+
+  // When 'new_tweet' events are fired, do something with the packaged tweet
+  socket.on('new_tweet', function (tweet) { 
+    console.log(tweet);
+    alert('Refreshing... check the console...');
+    // some logic to add the new tweet to the DOM…
+  }); 
 
 app.use(morgan('dev'));
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 
 
 app.engine('html', swig.renderFile);

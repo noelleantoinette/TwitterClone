@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-family: Georgia;
   /* The html and body elements cannot have any padding or margin. */
 }
  
@@ -43,6 +44,7 @@ code {
  
 .tweetbox {
   padding: 7px;
+
 }
  
 .tweetbox img {
