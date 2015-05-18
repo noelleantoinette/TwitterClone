@@ -12,8 +12,9 @@
     <div class="col-md-9 panel-body">
         <!-- display tweets here -->
         {% for tweet in tweets %} {% if showForm %}
+        {% if tweet === tweets[0] %}
         <form action="/submit" method="POST">
-            <p>{{tweet.name}}</p>
+            
             <label for="name_field">Name:</label>
             <input name="name" type="text" id="name_field" value="{{tweet.name}}" />
             <label for="text_field">Text:</label>
@@ -21,14 +22,17 @@
             <input type="submit" value="Submit" />
         </form>
         {% endif %}
+        {% endif %}
         <div>
             <br>
+            
             <h3><a href="/users/{{tweet.name}}">{{tweet.name}}</a></h3>
+            
             <li class="tweetbox">{{tweet.text}}</li>
         </div>
         {% endfor %}
     </div>
 
-    
+
 </div>
 {% endblock %}
