@@ -4,6 +4,12 @@ body {
   font-family: Georgia;
   /* The html and body elements cannot have any padding or margin. */
 }
+
+a {
+  font-family: Georgia;
+  color: black;
+  font-weight: 700;
+}
  
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -44,6 +50,7 @@ code {
  
 .tweetbox {
   padding: 7px;
+  font-family: Georgia;
 
 }
  
