@@ -1,3 +1,6 @@
+// Initial tweetbank used during build. Replaced by SQL data 
+
+
 var _ = require('underscore');
 
 var data = [];
@@ -36,6 +39,5 @@ var getFakeTweet = function() {
 
 for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet(), i);
+  console.log(getFakeTweet())
 };
-
-console.log(data);
