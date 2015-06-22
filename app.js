@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname);
 app.use(express.static(__dirname + '/public'));
 
 app.set('view cache', false);
